@@ -30,7 +30,7 @@ def save_reservations(request):
     reservation.flight = flight
     reservation.passenger = passenger
 
-    Reservation.save(reservation)
+    reservation.save()
     return Response(status=status.HTTP_201_CREATED)
 
 
