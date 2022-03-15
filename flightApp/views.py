@@ -25,6 +25,7 @@ def save_reservations(request):
     passenger.middle_name = request.data['middle_name']
     passenger.email = request.data['email']
     passenger.phone = request.data['phone']
+    passenger.save()
 
     reservation = Reservation()
     reservation.flight = flight
